@@ -10,7 +10,7 @@ phi=-58.12;
 % J0=lambda/lambda_max;
 J0=1;
 t=0:1:1000;
-J=J0*((t/1000)/tr)/(1+((t/1000)/tr)).*exp(-((t/1000)/td)).*cos(2*pi*(t/2500)/tp+phi);
+J=J0*((t/1000)/tr).^3/(1+((t/1000)/tr).^3).*exp(-((t/1000)/td).^2).*cos(2*pi*(t/1000)/tp+phi);
 Jp=J;
 figure;plot(t,J,'r')
 
